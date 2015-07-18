@@ -21,6 +21,7 @@
 		CE6B330A1B35769300579C98 /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B33081B35769300579C98 /* map.h */; };
 		CE6ED6F41B35C85D00B9DE52 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6ED6F21B35C85D00B9DE52 /* stack.c */; };
 		CE6ED6F51B35C85D00B9DE52 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6ED6F31B35C85D00B9DE52 /* stack.h */; };
+		CEDF0DFB1B5A00DF005487A2 /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFA1B5A00DF005487A2 /* stream.c */; };
 		CEF69BEE1B35519600FB6F98 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CEF69BED1B35519600FB6F98 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		CE6B33081B35769300579C98 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
 		CE6ED6F21B35C85D00B9DE52 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
 		CE6ED6F31B35C85D00B9DE52 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		CEDF0DF91B59FFC0005487A2 /* stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
+		CEDF0DFA1B5A00DF005487A2 /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
 		CEF69BE01B3550AD00FB6F98 /* liblae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblae.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF69BEB1B35519500FB6F98 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF69BED1B35519600FB6F98 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				CE6B33081B35769300579C98 /* map.h */,
 				CE2F4AFF1B3D9FCE009BDBDE /* range.c */,
 				CE2F4B001B3D9FCE009BDBDE /* range.h */,
+				CEDF0DFA1B5A00DF005487A2 /* stream.c */,
+				CEDF0DF91B59FFC0005487A2 /* stream.h */,
 			);
 			path = lae;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 			files = (
 				CE6ED6F41B35C85D00B9DE52 /* stack.c in Sources */,
 				CE6B32F61B3557E200579C98 /* allocator.c in Sources */,
+				CEDF0DFB1B5A00DF005487A2 /* stream.c in Sources */,
 				CE6B33091B35769300579C98 /* map.c in Sources */,
 				CE2F4B011B3D9FCE009BDBDE /* range.c in Sources */,
 				CE6B33051B35741400579C98 /* pool.c in Sources */,
