@@ -28,12 +28,12 @@ void lae_allocator_release( lae_allocator * allocator )
     allocator->free_function( allocator );
 }
 
-static void * default_allocate( const int32_t size, const int32_t count )
+static void * default_allocate( const size_t size, const size_t count )
 {
     return malloc( size * count );
 }
 
-static void * default_reallocate( void * allocated, const int32_t size, const int32_t count )
+static void * default_reallocate( void * allocated, const size_t size, const size_t count )
 {
     return realloc( allocated, size * count );
 }
@@ -56,12 +56,12 @@ lae_allocator * lae_allocator_default()
     return default_allocator;
 }
 
-void * lae_allocator_allocate( const lae_allocator * allocator, const int32_t size, const int32_t count )
+void * lae_allocator_allocate( const lae_allocator * allocator, const size_t size, const size_t count )
 {
     return allocator->allocate_function( size, count );
 }
 
-void * lae_allocator_reallocate( const lae_allocator * allocator, void * allocated, const int32_t size, const int32_t count )
+void * lae_allocator_reallocate( const lae_allocator * allocator, void * allocated, const size_t size, const size_t count )
 {
     return allocator->reallocate_function( allocated, size, count );
 }

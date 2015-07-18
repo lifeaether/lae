@@ -8,20 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CE2F4B011B3D9FCE009BDBDE /* range.c in Sources */ = {isa = PBXBuildFile; fileRef = CE2F4AFF1B3D9FCE009BDBDE /* range.c */; };
-		CE2F4B021B3D9FCE009BDBDE /* range.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2F4B001B3D9FCE009BDBDE /* range.h */; };
-		CE6B32EF1B35539C00579C98 /* lae.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B32EE1B35539C00579C98 /* lae.h */; };
 		CE6B32F21B3553BD00579C98 /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF69BE01B3550AD00FB6F98 /* liblae.a */; };
-		CE6B32F41B35553200579C98 /* allocator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B32F31B35553200579C98 /* allocator.h */; };
 		CE6B32F61B3557E200579C98 /* allocator.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B32F51B3557E200579C98 /* allocator.c */; };
 		CE6B32FD1B3565EE00579C98 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B32FB1B3565EE00579C98 /* array.c */; };
-		CE6B32FE1B3565EE00579C98 /* array.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B32FC1B3565EE00579C98 /* array.h */; };
 		CE6B33051B35741400579C98 /* pool.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B33031B35741400579C98 /* pool.c */; };
-		CE6B33061B35741400579C98 /* pool.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B33041B35741400579C98 /* pool.h */; };
 		CE6B33091B35769300579C98 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B33071B35769300579C98 /* map.c */; };
-		CE6B330A1B35769300579C98 /* map.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6B33081B35769300579C98 /* map.h */; };
 		CE6ED6F41B35C85D00B9DE52 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6ED6F21B35C85D00B9DE52 /* stack.c */; };
-		CE6ED6F51B35C85D00B9DE52 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = CE6ED6F31B35C85D00B9DE52 /* stack.h */; };
 		CEDF0DFB1B5A00DF005487A2 /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFA1B5A00DF005487A2 /* stream.c */; };
+		CEDF0DFE1B5A11BD005487A2 /* filestream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFC1B5A11BD005487A2 /* filestream.c */; };
+		CEDF0E021B5A180B005487A2 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0E001B5A180B005487A2 /* string.c */; };
 		CEF69BEE1B35519600FB6F98 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CEF69BED1B35519600FB6F98 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +58,10 @@
 		CE6ED6F31B35C85D00B9DE52 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		CEDF0DF91B59FFC0005487A2 /* stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
 		CEDF0DFA1B5A00DF005487A2 /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
+		CEDF0DFC1B5A11BD005487A2 /* filestream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filestream.c; sourceTree = "<group>"; };
+		CEDF0DFD1B5A11BD005487A2 /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
+		CEDF0E001B5A180B005487A2 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
+		CEDF0E011B5A180B005487A2 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
 		CEF69BE01B3550AD00FB6F98 /* liblae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblae.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF69BEB1B35519500FB6F98 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF69BED1B35519600FB6F98 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -113,6 +112,10 @@
 				CE2F4B001B3D9FCE009BDBDE /* range.h */,
 				CEDF0DFA1B5A00DF005487A2 /* stream.c */,
 				CEDF0DF91B59FFC0005487A2 /* stream.h */,
+				CEDF0DFC1B5A11BD005487A2 /* filestream.c */,
+				CEDF0DFD1B5A11BD005487A2 /* filestream.h */,
+				CEDF0E001B5A180B005487A2 /* string.c */,
+				CEDF0E011B5A180B005487A2 /* string.h */,
 			);
 			path = lae;
 			sourceTree = "<group>";
@@ -145,23 +148,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		CEF69BDE1B3550AD00FB6F98 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CE2F4B021B3D9FCE009BDBDE /* range.h in Headers */,
-				CE6B32FE1B3565EE00579C98 /* array.h in Headers */,
-				CE6B33061B35741400579C98 /* pool.h in Headers */,
-				CE6B330A1B35769300579C98 /* map.h in Headers */,
-				CE6B32EF1B35539C00579C98 /* lae.h in Headers */,
-				CE6ED6F51B35C85D00B9DE52 /* stack.h in Headers */,
-				CE6B32F41B35553200579C98 /* allocator.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		CEF69BDF1B3550AD00FB6F98 /* lae */ = {
 			isa = PBXNativeTarget;
@@ -169,7 +155,6 @@
 			buildPhases = (
 				CEF69BDC1B3550AD00FB6F98 /* Sources */,
 				CEF69BDD1B3550AD00FB6F98 /* Frameworks */,
-				CEF69BDE1B3550AD00FB6F98 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -239,10 +224,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6ED6F41B35C85D00B9DE52 /* stack.c in Sources */,
+				CEDF0DFE1B5A11BD005487A2 /* filestream.c in Sources */,
 				CE6B32F61B3557E200579C98 /* allocator.c in Sources */,
 				CEDF0DFB1B5A00DF005487A2 /* stream.c in Sources */,
 				CE6B33091B35769300579C98 /* map.c in Sources */,
 				CE2F4B011B3D9FCE009BDBDE /* range.c in Sources */,
+				CEDF0E021B5A180B005487A2 /* string.c in Sources */,
 				CE6B33051B35741400579C98 /* pool.c in Sources */,
 				CE6B32FD1B3565EE00579C98 /* array.c in Sources */,
 			);
@@ -270,7 +257,7 @@
 		CEF69BE21B3550AD00FB6F98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -317,7 +304,7 @@
 		CEF69BE31B3550AD00FB6F98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
