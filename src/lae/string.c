@@ -13,7 +13,7 @@ typedef struct {
 
 size_t lae_string_ascii_count( const lae_string * string )
 {
-    return lae_string_size( string ) - 1;
+    return lae_string_size( string );
 }
 
 uint32_t lae_string_ascii_at( const lae_string * string, const size_t index )
@@ -47,7 +47,7 @@ lae_string * lae_string_create( lae_allocator * allocator, const char * bytes, c
     lae_string * string = lae_allocator_allocate( allocator, sizeof( lae_string ), 1 );
     if ( string ) {
         string->allocator = allocator;
-        string->bytes = (char *)lae_allocator_allocate( allocator, size + 1, 1 );
+        string->bytes = (char *)lae_allocator_allocate( allocator, size + 4, 1 );
         memcpy( (void *)string->bytes, bytes, size );
         string->bytes[size] = 0;
         string->size = size;
