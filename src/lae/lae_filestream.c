@@ -2,6 +2,7 @@
 
 #include <lae/lae_pool.h>
 
+#include <pthread.h>
 #include <stdio.h>
 #include <assert.h>
 
@@ -100,4 +101,49 @@ lae_stream * lae_filestream_create  ( lae_allocator * allocator, lae_string * fi
 void lae_filestream_release ( lae_stream * stream )
 {
     lae_stream_release( stream );
+}
+
+static lae_stream * filestream_stdin = NULL;
+static void lae_filestream_stdin_init()
+{
+    lae_stream_functions functions = {};
+    functions.read = lae_filestream_read;
+    filestream_stdin = lae_stream_create( lae_allocator_default(), (void *)stdin, functions );
+}
+
+lae_stream * lae_filestream_stdin()
+{
+    static pthread_once_t once = PTHREAD_ONCE_INIT;
+    pthread_once( &once, lae_filestream_stdin_init );
+    return filestream_stdin;
+}
+
+static lae_stream * filestream_stdout = NULL;
+static void lae_filestream_stdout_init()
+{
+    lae_stream_functions functions = {};
+    functions.write = lae_filestream_write;
+    filestream_stdout = lae_stream_create( lae_allocator_default(), (void *)stdout, functions );
+}
+
+lae_stream * lae_filestream_stdout()
+{
+    static pthread_once_t once = PTHREAD_ONCE_INIT;
+    pthread_once( &once, lae_filestream_stdout_init );
+    return filestream_stdout;
+}
+
+static lae_stream * filestream_stderr = NULL;
+static void lae_filestream_stderr_init()
+{
+    lae_stream_functions functions = {};
+    functions.write = lae_filestream_write;
+    filestream_stderr = lae_stream_create( lae_allocator_default(), (void *)stderr, functions );
+}
+
+lae_stream * lae_filestream_stderr()
+{
+    static pthread_once_t once = PTHREAD_ONCE_INIT;
+    pthread_once( &once, lae_filestream_stderr_init );
+    return filestream_stderr;
 }
