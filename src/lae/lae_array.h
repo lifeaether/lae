@@ -2,8 +2,8 @@
 #ifndef __lae_array__
 #define __lae_array__
 
-#include <lae/allocator.h>
-#include <lae/range.h>
+#include <lae/lae_allocator.h>
+#include <lae/lae_range.h>
 
 #include <stdint.h>
 #include <stdbool.h>

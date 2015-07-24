@@ -1,5 +1,5 @@
 
-#include "stack.h"
+#include <lae/lae_stack.h>
 
 lae_stack * lae_stack_make( lae_allocator * allocator )
 {

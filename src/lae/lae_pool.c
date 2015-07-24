@@ -1,9 +1,9 @@
 
-#include <lae/pool.h>
+#include <lae/lae_pool.h>
 
-#include <lae/stack.h>
-#include <lae/array.h>
-#include <lae/map.h>
+#include <lae/lae_stack.h>
+#include <lae/lae_array.h>
+#include <lae/lae_map.h>
 
 #include <pthread.h>
 

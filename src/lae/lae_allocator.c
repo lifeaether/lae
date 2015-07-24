@@ -1,4 +1,4 @@
-#include <lae/allocator.h>
+#include <lae/lae_allocator.h>
 
 #include <pthread.h>
 #include <stdlib.h>

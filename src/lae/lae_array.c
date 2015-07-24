@@ -1,6 +1,6 @@
 
-#include <lae/array.h>
-#include <lae/pool.h>
+#include <lae/lae_array.h>
+#include <lae/lae_pool.h>
 
 #include <string.h>
 

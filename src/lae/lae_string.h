@@ -1,7 +1,7 @@
 #ifndef __lae__string__
 #define __lae__string__
 
-#include <lae/allocator.h>
+#include <lae/lae_allocator.h>
 
 struct lae_string;
 typedef struct lae_string lae_string;
@@ -13,6 +13,9 @@ typedef enum {
     lae_string_econding_utf16   = 11,
     lae_string_econding_utf32   = 12
 } lae_string_encodings;
+
+lae_string *    lae_ascii   ( const char * bytes );
+lae_string *    lae_utf8    ( const char * bytes );
 
 lae_string *    lae_string_make         ( lae_allocator * allocator, const char * bytes, const size_t size, const lae_string_encodings encoding );
 lae_string *    lae_string_create       ( lae_allocator * allocator, const char * bytes, const size_t size, const lae_string_encodings encoding );

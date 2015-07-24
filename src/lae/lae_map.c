@@ -1,6 +1,6 @@
 
-#include <lae/map.h>
-#include <lae/pool.h>
+#include <lae/lae_map.h>
+#include <lae/lae_pool.h>
 
 struct lae_map_node;
 typedef struct lae_map_node lae_map_node;

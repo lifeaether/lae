@@ -2,7 +2,7 @@
 #ifndef __lae__pool__
 #define __lae__pool__
 
-#include <lae/allocator.h>
+#include <lae/lae_allocator.h>
 
 struct lae_pool;
 typedef struct lae_pool lae_pool;

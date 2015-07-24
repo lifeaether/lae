@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE2F4B011B3D9FCE009BDBDE /* range.c in Sources */ = {isa = PBXBuildFile; fileRef = CE2F4AFF1B3D9FCE009BDBDE /* range.c */; };
+		CE2F4B011B3D9FCE009BDBDE /* lae_range.c in Sources */ = {isa = PBXBuildFile; fileRef = CE2F4AFF1B3D9FCE009BDBDE /* lae_range.c */; };
 		CE6B32F21B3553BD00579C98 /* liblae.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF69BE01B3550AD00FB6F98 /* liblae.a */; };
-		CE6B32F61B3557E200579C98 /* allocator.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B32F51B3557E200579C98 /* allocator.c */; };
-		CE6B32FD1B3565EE00579C98 /* array.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B32FB1B3565EE00579C98 /* array.c */; };
-		CE6B33051B35741400579C98 /* pool.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B33031B35741400579C98 /* pool.c */; };
-		CE6B33091B35769300579C98 /* map.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B33071B35769300579C98 /* map.c */; };
-		CE6ED6F41B35C85D00B9DE52 /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6ED6F21B35C85D00B9DE52 /* stack.c */; };
-		CEDF0DFB1B5A00DF005487A2 /* stream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFA1B5A00DF005487A2 /* stream.c */; };
-		CEDF0DFE1B5A11BD005487A2 /* filestream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFC1B5A11BD005487A2 /* filestream.c */; };
-		CEDF0E021B5A180B005487A2 /* string.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0E001B5A180B005487A2 /* string.c */; };
+		CE6B32F61B3557E200579C98 /* lae_allocator.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B32F51B3557E200579C98 /* lae_allocator.c */; };
+		CE6B32FD1B3565EE00579C98 /* lae_array.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B32FB1B3565EE00579C98 /* lae_array.c */; };
+		CE6B33051B35741400579C98 /* lae_pool.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B33031B35741400579C98 /* lae_pool.c */; };
+		CE6B33091B35769300579C98 /* lae_map.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6B33071B35769300579C98 /* lae_map.c */; };
+		CE6ED6F41B35C85D00B9DE52 /* lae_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = CE6ED6F21B35C85D00B9DE52 /* lae_stack.c */; };
+		CEDF0DFB1B5A00DF005487A2 /* lae_stream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFA1B5A00DF005487A2 /* lae_stream.c */; };
+		CEDF0DFE1B5A11BD005487A2 /* lae_filestream.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0DFC1B5A11BD005487A2 /* lae_filestream.c */; };
+		CEDF0E021B5A180B005487A2 /* lae_string.c in Sources */ = {isa = PBXBuildFile; fileRef = CEDF0E001B5A180B005487A2 /* lae_string.c */; };
 		CEF69BEE1B35519600FB6F98 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CEF69BED1B35519600FB6F98 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -43,25 +43,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE2F4AFF1B3D9FCE009BDBDE /* range.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = range.c; sourceTree = "<group>"; };
-		CE2F4B001B3D9FCE009BDBDE /* range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = range.h; sourceTree = "<group>"; };
+		CE2F4AFF1B3D9FCE009BDBDE /* lae_range.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_range.c; sourceTree = "<group>"; };
+		CE2F4B001B3D9FCE009BDBDE /* lae_range.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_range.h; sourceTree = "<group>"; };
 		CE6B32EE1B35539C00579C98 /* lae.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae.h; sourceTree = "<group>"; };
-		CE6B32F31B35553200579C98 /* allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allocator.h; sourceTree = "<group>"; };
-		CE6B32F51B3557E200579C98 /* allocator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = allocator.c; sourceTree = "<group>"; };
-		CE6B32FB1B3565EE00579C98 /* array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = array.c; sourceTree = "<group>"; };
-		CE6B32FC1B3565EE00579C98 /* array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = array.h; sourceTree = "<group>"; };
-		CE6B33031B35741400579C98 /* pool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pool.c; sourceTree = "<group>"; };
-		CE6B33041B35741400579C98 /* pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pool.h; sourceTree = "<group>"; };
-		CE6B33071B35769300579C98 /* map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = map.c; sourceTree = "<group>"; };
-		CE6B33081B35769300579C98 /* map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
-		CE6ED6F21B35C85D00B9DE52 /* stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stack.c; sourceTree = "<group>"; };
-		CE6ED6F31B35C85D00B9DE52 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
-		CEDF0DF91B59FFC0005487A2 /* stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stream.h; sourceTree = "<group>"; };
-		CEDF0DFA1B5A00DF005487A2 /* stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = stream.c; sourceTree = "<group>"; };
-		CEDF0DFC1B5A11BD005487A2 /* filestream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = filestream.c; sourceTree = "<group>"; };
-		CEDF0DFD1B5A11BD005487A2 /* filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filestream.h; sourceTree = "<group>"; };
-		CEDF0E001B5A180B005487A2 /* string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = string.c; sourceTree = "<group>"; };
-		CEDF0E011B5A180B005487A2 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = string.h; sourceTree = "<group>"; };
+		CE6B32F31B35553200579C98 /* lae_allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_allocator.h; sourceTree = "<group>"; };
+		CE6B32F51B3557E200579C98 /* lae_allocator.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_allocator.c; sourceTree = "<group>"; };
+		CE6B32FB1B3565EE00579C98 /* lae_array.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_array.c; sourceTree = "<group>"; };
+		CE6B32FC1B3565EE00579C98 /* lae_array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_array.h; sourceTree = "<group>"; };
+		CE6B33031B35741400579C98 /* lae_pool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_pool.c; sourceTree = "<group>"; };
+		CE6B33041B35741400579C98 /* lae_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_pool.h; sourceTree = "<group>"; };
+		CE6B33071B35769300579C98 /* lae_map.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_map.c; sourceTree = "<group>"; };
+		CE6B33081B35769300579C98 /* lae_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_map.h; sourceTree = "<group>"; };
+		CE6ED6F21B35C85D00B9DE52 /* lae_stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_stack.c; sourceTree = "<group>"; };
+		CE6ED6F31B35C85D00B9DE52 /* lae_stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_stack.h; sourceTree = "<group>"; };
+		CEDF0DF91B59FFC0005487A2 /* lae_stream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lae_stream.h; sourceTree = "<group>"; };
+		CEDF0DFA1B5A00DF005487A2 /* lae_stream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_stream.c; sourceTree = "<group>"; };
+		CEDF0DFC1B5A11BD005487A2 /* lae_filestream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_filestream.c; sourceTree = "<group>"; };
+		CEDF0DFD1B5A11BD005487A2 /* lae_filestream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_filestream.h; sourceTree = "<group>"; };
+		CEDF0E001B5A180B005487A2 /* lae_string.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = lae_string.c; sourceTree = "<group>"; };
+		CEDF0E011B5A180B005487A2 /* lae_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lae_string.h; sourceTree = "<group>"; };
 		CEF69BE01B3550AD00FB6F98 /* liblae.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liblae.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF69BEB1B35519500FB6F98 /* test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF69BED1B35519600FB6F98 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
@@ -98,24 +98,24 @@
 			isa = PBXGroup;
 			children = (
 				CE6B32EE1B35539C00579C98 /* lae.h */,
-				CE6B32F51B3557E200579C98 /* allocator.c */,
-				CE6B32F31B35553200579C98 /* allocator.h */,
-				CE6B32FB1B3565EE00579C98 /* array.c */,
-				CE6B32FC1B3565EE00579C98 /* array.h */,
-				CE6ED6F21B35C85D00B9DE52 /* stack.c */,
-				CE6ED6F31B35C85D00B9DE52 /* stack.h */,
-				CE6B33031B35741400579C98 /* pool.c */,
-				CE6B33041B35741400579C98 /* pool.h */,
-				CE6B33071B35769300579C98 /* map.c */,
-				CE6B33081B35769300579C98 /* map.h */,
-				CE2F4AFF1B3D9FCE009BDBDE /* range.c */,
-				CE2F4B001B3D9FCE009BDBDE /* range.h */,
-				CEDF0DFA1B5A00DF005487A2 /* stream.c */,
-				CEDF0DF91B59FFC0005487A2 /* stream.h */,
-				CEDF0DFC1B5A11BD005487A2 /* filestream.c */,
-				CEDF0DFD1B5A11BD005487A2 /* filestream.h */,
-				CEDF0E001B5A180B005487A2 /* string.c */,
-				CEDF0E011B5A180B005487A2 /* string.h */,
+				CE6B32F51B3557E200579C98 /* lae_allocator.c */,
+				CE6B32F31B35553200579C98 /* lae_allocator.h */,
+				CE6B32FB1B3565EE00579C98 /* lae_array.c */,
+				CE6B32FC1B3565EE00579C98 /* lae_array.h */,
+				CE6ED6F21B35C85D00B9DE52 /* lae_stack.c */,
+				CE6ED6F31B35C85D00B9DE52 /* lae_stack.h */,
+				CE6B33031B35741400579C98 /* lae_pool.c */,
+				CE6B33041B35741400579C98 /* lae_pool.h */,
+				CE6B33071B35769300579C98 /* lae_map.c */,
+				CE6B33081B35769300579C98 /* lae_map.h */,
+				CE2F4AFF1B3D9FCE009BDBDE /* lae_range.c */,
+				CE2F4B001B3D9FCE009BDBDE /* lae_range.h */,
+				CEDF0DFA1B5A00DF005487A2 /* lae_stream.c */,
+				CEDF0DF91B59FFC0005487A2 /* lae_stream.h */,
+				CEDF0DFC1B5A11BD005487A2 /* lae_filestream.c */,
+				CEDF0DFD1B5A11BD005487A2 /* lae_filestream.h */,
+				CEDF0E001B5A180B005487A2 /* lae_string.c */,
+				CEDF0E011B5A180B005487A2 /* lae_string.h */,
 			);
 			path = lae;
 			sourceTree = "<group>";
@@ -223,15 +223,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6ED6F41B35C85D00B9DE52 /* stack.c in Sources */,
-				CEDF0DFE1B5A11BD005487A2 /* filestream.c in Sources */,
-				CE6B32F61B3557E200579C98 /* allocator.c in Sources */,
-				CEDF0DFB1B5A00DF005487A2 /* stream.c in Sources */,
-				CE6B33091B35769300579C98 /* map.c in Sources */,
-				CE2F4B011B3D9FCE009BDBDE /* range.c in Sources */,
-				CEDF0E021B5A180B005487A2 /* string.c in Sources */,
-				CE6B33051B35741400579C98 /* pool.c in Sources */,
-				CE6B32FD1B3565EE00579C98 /* array.c in Sources */,
+				CE6ED6F41B35C85D00B9DE52 /* lae_stack.c in Sources */,
+				CEDF0DFE1B5A11BD005487A2 /* lae_filestream.c in Sources */,
+				CE6B32F61B3557E200579C98 /* lae_allocator.c in Sources */,
+				CEDF0DFB1B5A00DF005487A2 /* lae_stream.c in Sources */,
+				CE6B33091B35769300579C98 /* lae_map.c in Sources */,
+				CE2F4B011B3D9FCE009BDBDE /* lae_range.c in Sources */,
+				CEDF0E021B5A180B005487A2 /* lae_string.c in Sources */,
+				CE6B33051B35741400579C98 /* lae_pool.c in Sources */,
+				CE6B32FD1B3565EE00579C98 /* lae_array.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

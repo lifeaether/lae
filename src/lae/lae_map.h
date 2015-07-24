@@ -2,7 +2,7 @@
 #ifndef __lae__map__
 #define __lae__map__
 
-#include <lae/allocator.h>
+#include <lae/lae_allocator.h>
 
 #include <stdint.h>
 #include <stdbool.h>

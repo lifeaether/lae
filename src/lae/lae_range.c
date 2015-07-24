@@ -1,4 +1,4 @@
-#include <lae/range.h>
+#include <lae/lae_range.h>
 
 lae_range lae_range_make( const int32_t location, const uint32_t length )
 {

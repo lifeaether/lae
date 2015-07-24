@@ -2,8 +2,8 @@
 #ifndef __lae__stack__
 #define __lae__stack__
 
-#include <lae/array.h>
-#include <lae/allocator.h>
+#include <lae/lae_array.h>
+#include <lae/lae_allocator.h>
 
 typedef lae_array lae_stack;
 

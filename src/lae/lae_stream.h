@@ -1,7 +1,7 @@
 #ifndef __lae_stream_h
 #define __lae_stream_h
 
-#include <lae/allocator.h>
+#include <lae/lae_allocator.h>
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -23,7 +23,7 @@ typedef struct {
 } lae_stream_result;
 
 typedef lae_stream_result (*lae_stream_read_function)      ( void * info, void * bytes, const size_t size, const size_t count );
-typedef lae_stream_result (*lae_stream_write_function)     ( void * info, void * bytes, const size_t size, const size_t count );
+typedef lae_stream_result (*lae_stream_write_function)     ( void * info, const void * bytes, const size_t size, const size_t count );
 typedef lae_stream_result (*lae_stream_offset_function)    ( void * info );
 typedef lae_stream_result (*lae_stream_seek_function)      ( void * info, const int64_t offset );
 typedef lae_stream_result (*lae_stream_seek_begin_function)( void * info );
@@ -48,7 +48,7 @@ bool                lae_stream_readable     ( const lae_stream * stream );
 lae_stream_result   lae_stream_read         ( lae_stream * stream, void * bytes, const size_t size, const size_t count );
 
 bool                lae_stream_writable     ( const lae_stream * stream );
-lae_stream_result   lae_stream_write        ( lae_stream * stream, void * bytes, const size_t size, const size_t count );
+lae_stream_result   lae_stream_write        ( lae_stream * stream, const void * bytes, const size_t size, const size_t count );
 
 bool                lae_stream_seekable     ( const lae_stream * stream );
 lae_stream_result   lae_stream_offset       ( lae_stream * stream );

@@ -1,6 +1,6 @@
-#include <lae/stream.h>
+#include <lae/lae_stream.h>
 
-#include <lae/pool.h>
+#include <lae/lae_pool.h>
 
 struct lae_stream {
     lae_allocator *     allocator;
@@ -48,7 +48,7 @@ bool lae_stream_writable( const lae_stream * stream )
     return stream->function.write != NULL;
 }
 
-lae_stream_result lae_stream_write( lae_stream * stream, void * bytes, const size_t size, const size_t count )
+lae_stream_result lae_stream_write( lae_stream * stream, const void * bytes, const size_t size, const size_t count )
 {
     return stream->function.write( stream->info, bytes, size, count );
 }

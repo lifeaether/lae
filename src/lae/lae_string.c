@@ -1,6 +1,6 @@
-#include <lae/string.h>
+#include <lae/lae_string.h>
 
-#include <lae/pool.h>
+#include <lae/lae_pool.h>
 
 #include <string.h>
 
@@ -35,6 +35,16 @@ struct lae_string {
     lae_string_functions    function;
 };
 
+lae_string * lae_ascii( const char * bytes )
+{
+    return lae_string_make( lae_allocator_default(), bytes, strlen( bytes ), lae_string_encoding_ascii );
+}
+
+lae_string * lae_utf8( const char * bytes )
+{
+    return lae_string_make( lae_allocator_default(), bytes, strlen( bytes ), lae_string_econding_utf8 );
+}
+
 lae_string * lae_string_make( lae_allocator * allocator, const char * bytes, const size_t size, const lae_string_encodings encoding )
 {
     lae_string * string = lae_string_create( allocator, bytes, size, encoding );
@@ -47,10 +57,15 @@ lae_string * lae_string_create( lae_allocator * allocator, const char * bytes, c
     lae_string * string = lae_allocator_allocate( allocator, sizeof( lae_string ), 1 );
     if ( string ) {
         string->allocator = allocator;
+
         string->bytes = (char *)lae_allocator_allocate( allocator, size + 4, 1 );
         memcpy( (void *)string->bytes, bytes, size );
-        string->bytes[size] = 0;
+        string->bytes[size+0] = 0;
+        string->bytes[size+1] = 0;
+        string->bytes[size+2] = 0;
+        string->bytes[size+3] = 0;
         string->size = size;
+
         string->encoding = encoding;
         switch ( encoding ) {
             case lae_string_encoding_ascii:
