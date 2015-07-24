@@ -1,5 +1,7 @@
 #include <lae/lae_filestream.h>
 
+#include <lae/lae_pool.h>
+
 #include <stdio.h>
 #include <assert.h>
 
@@ -49,6 +51,15 @@ static lae_stream_result lae_filestream_close( void * info )
         r.error = lae_stream_code_failed;
     }
     return r;
+}
+
+lae_stream * lae_filestream_make    ( lae_allocator * allocator, lae_string * filename, const lae_filestream_access access )
+{
+    lae_stream * stream = lae_filestream_create( allocator, filename, access );
+    if ( stream ) {
+        lae_pool_add( lae_pool_current(), stream, (lae_pool_release_handler)lae_filestream_release );
+    }
+    return stream;
 }
 
 lae_stream * lae_filestream_create  ( lae_allocator * allocator, lae_string * filename, const lae_filestream_access access )
