@@ -10,9 +10,11 @@ struct lae_stream;
 typedef struct lae_stream lae_stream;
 
 typedef enum {
-    lae_stream_code_ok      = 0,
-    lae_stream_code_failed  = 1,
-    lae_stream_code_last    = 10000,
+    lae_stream_code_ok          = 0,
+    lae_stream_code_failed      = 1,
+    lae_stream_code_undefined   = 9,
+    lae_stream_code_eof         = 100,
+    lae_stream_code_last        = 10000,
 
     lae_stream_code_user    = 20000,
 } lae_stream_codes;
