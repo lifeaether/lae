@@ -15,7 +15,7 @@ typedef enum {
 
 lae_stream * lae_filestream_make    ( lae_allocator * allocator, lae_string * filename, const lae_filestream_access access );
 lae_stream * lae_filestream_create  ( lae_allocator * allocator, lae_string * filename, const lae_filestream_access access );
-void lae_filestream_release ( lae_stream * stream );
+void lae_filestream_release         ( lae_stream * stream );
 
 lae_stream * lae_filestream_stdin   ();
 lae_stream * lae_filestream_stdout  ();

@@ -27,7 +27,7 @@ lae_stream * lae_stream_create( lae_allocator * allocator, void * info, const la
 
 void lae_stream_release( lae_stream * stream )
 {
-    if ( stream->function.close ) {
+    if ( lae_stream_closable( stream ) ) {
         stream->function.close( stream->info );
     }
     lae_allocator_free( stream->allocator, stream );
@@ -76,4 +76,18 @@ lae_stream_result lae_stream_seek_begin( lae_stream * stream )
 lae_stream_result lae_stream_seek_end( lae_stream * stream )
 {
     return stream->function.seek_end( stream->info );
+}
+
+bool lae_stream_closable( lae_stream * stream )
+{
+    return stream->function.close != NULL;
+}
+
+lae_stream_result lae_stream_close( lae_stream * stream )
+{
+    lae_stream_result r = stream->function.close( stream->info );
+    if ( r.error == lae_stream_code_ok ) {
+        stream->function.close = NULL;
+    }
+    return r;
 }

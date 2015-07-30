@@ -58,4 +58,7 @@ lae_stream_result   lae_stream_seek         ( lae_stream * stream, const int64_t
 lae_stream_result   lae_stream_seek_begin   ( lae_stream * stream );
 lae_stream_result   lae_stream_seek_end     ( lae_stream * stream );
 
+bool                lae_stream_closable     ( lae_stream * stream );
+lae_stream_result   lae_stream_close        ( lae_stream * stream );
+
 #endif
