@@ -8,6 +8,12 @@ struct lae_stream {
     lae_stream_functions function;
 };
 
+lae_stream_result lae_stream_result_make    ( const size_t value, const lae_stream_codes code )
+{
+    lae_stream_result r = { value, code };
+    return r;
+}
+
 lae_stream * lae_stream_make( lae_allocator * allocator, void * info, const lae_stream_functions function )
 {
     lae_stream * stream = lae_stream_create( allocator, info, function );
@@ -20,6 +26,7 @@ lae_stream * lae_stream_create( lae_allocator * allocator, void * info, const la
     lae_stream * stream = lae_allocator_allocate( allocator, sizeof( lae_stream ), 1 );
     if ( stream ) {
         stream->allocator = allocator;
+        stream->info = info;
         stream->function = function;
     }
     return stream;

@@ -10,11 +10,12 @@ struct lae_stream;
 typedef struct lae_stream lae_stream;
 
 typedef enum {
-    lae_stream_code_ok          = 0,
-    lae_stream_code_failed      = 1,
-    lae_stream_code_undefined   = 9,
-    lae_stream_code_eof         = 100,
-    lae_stream_code_last        = 10000,
+    lae_stream_code_ok                  = 0,
+    lae_stream_code_failed              = 1,
+    lae_stream_code_failed_with_offset  = 2,
+    lae_stream_code_undefined           = 9,
+    lae_stream_code_eof                 = 100,
+    lae_stream_code_last                = 10000,
 
     lae_stream_code_user    = 20000,
 } lae_stream_codes;
@@ -23,6 +24,7 @@ typedef struct {
     size_t              value;
     lae_stream_codes    error;
 } lae_stream_result;
+lae_stream_result lae_stream_result_make    ( const size_t value, const lae_stream_codes code );
 
 typedef lae_stream_result (*lae_stream_read_function)      ( void * info, void * bytes, const size_t size, const size_t count );
 typedef lae_stream_result (*lae_stream_write_function)     ( void * info, const void * bytes, const size_t size, const size_t count );

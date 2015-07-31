@@ -48,6 +48,23 @@ int main(int argc, const char * argv[]) {
         fprintf( stdout, "%s\n", lae_map_get( map, "four" ) );
     }
     
+    {
+        lae_string * filename = lae_utf8( argv[1] );
+        lae_stream * stream = lae_filestream_make( lae_allocator_default(), filename, lae_filestream_access_readonly );
+        char buffer[255];
+        const lae_stream_result r = lae_stream_read( stream, buffer, sizeof( buffer ), 1 );
+        if ( r.error == lae_stream_code_ok ) {
+            buffer[r.value] = 0;
+            lae_stream_write( lae_stdout(), buffer, 1, r.value );
+        } else if ( r.error == lae_stream_code_eof ) {
+            buffer[r.value] = 0;
+            lae_stream_write( lae_stdout(), buffer, 1, r.value );
+        } else {
+            lae_stream_write( lae_stderr(), "err", 1, 3 );
+        }
+        lae_stream_close( stream );
+    }
+    
     lae_pool_release( pool );
     return 0;
 }
